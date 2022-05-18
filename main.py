@@ -1,8 +1,10 @@
 import re
 
-document_text = open('input2.txt')
+document_text = open('input.txt')
 frequency = {}
 string = document_text.read().lower()
+string1 = string
+
 
 string = string .replace('and', ' ')
 string = string .replace('as', ' ')
@@ -24,6 +26,11 @@ frequency_list = frequency.keys()
 for words in frequency_list:
     print(words, frequency[words])
 
+
+
+
+
+
 search = "fff"
 s1 = str('')
 s2 = 'Stop'
@@ -35,8 +42,8 @@ while search != s1 or search != s2:
     if search == s2 or search == s1:
         break
     else:
-        for i in range(len(string)):
-            if string[i: i + len(search)] == search:
+        for i in range(len(string1)):
+            if string1[i: i + len(search)] == search:
                 count += 1
 
     print(count)
